@@ -11,6 +11,8 @@ sendDelay = 1;
 
 # Opens Facebook Messenger
 driver = webdriver.Chrome('chromedriver.exe')
+#For Mac users, you don't have chromedriver.exe, please use the code below for driver:
+#driver = webdriver.Chrome()
 driver.get('https://www.messenger.com/')
 
 # Login
