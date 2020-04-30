@@ -1,6 +1,4 @@
 # Shrek word-by-word script sender
-This is a annoying script that sends someone on your Facebook Messenger the Shrek movie word by word.
-
 ![Benjamin Bannekat](https://i.imgur.com/7HVvmhC.jpg)
 # Prerequisites
 Make sure you have selenium installed
