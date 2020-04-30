@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
@@ -23,18 +24,9 @@ getUser = driver.find_element_by_xpath("//*[contains(text(), '" + friendName + "
 # Reads Shrek script file and saves to movie_script list
 movie_script = []
 with open('script.txt', "r") as f:
-    movie_script = f.read().split()
-
-# printing the list using loop
-for x in range(len(movie_script)):
-    print(movie_script[x])
-    insertMessage = driver.find_element_by_class_name('_1mj')
-    insertMessage.send_keys(movie_script[x], Keys.ENTER)
-    time.sleep(sendDelay)
-
-
-
-
-
-
-
+    for line in f.readlines():
+        for word in line.split():
+            print(word)
+            insertMessage = driver.find_element_by_class_name('_1mj')
+            insertMessage.send_keys(word, Keys.ENTER)
+            time.sleep(sendDelay)
