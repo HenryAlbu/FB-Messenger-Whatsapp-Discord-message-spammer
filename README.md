@@ -24,8 +24,10 @@ sendDelay = 1;
 friendName = "THE NAME OF THE PERSON THAT WILL GET THE MESSAGES"
 sendDelay = 1;
 ```
+
 When presented with the WhatsApp login screen, scan the QR code with your phone so that the 
 script can proceed.
+
 ---
 *Note: friendName should match the exact name of the user. In the image above, friendName would be "Example1". This applies to both Whatsapp and Messenger scripts*
 
