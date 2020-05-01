@@ -19,7 +19,7 @@ password = "YOUR PASSWORD"
 friendName = "THE NAME OF THE PERSON THAT WILL GET THE MESSAGES"
 sendDelay = 1;
 ```
-*Note: friendName should match the exact name of the user. In the image above, friendName would be "Example1". This applies to both Whatsapp/Messenger and Discord scripts*
+*Note: friendName should match the exact name of the user in the conversation list. In the image above, friendName would be "Example1". This applies to all scripts (Whatsapp/Messenger/Discord)
 
 
 #### Whatsapp (auto_shrek_whatsapp.py)
