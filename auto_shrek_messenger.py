@@ -24,6 +24,9 @@ driver.find_element_by_xpath('//*[@id="email"]').send_keys(facebookEmail)
 driver.find_element_by_xpath('//*[@id="pass"]').send_keys(facebookPassword)
 driver.find_element_by_xpath('//*[@id="loginbutton"]').click()
 
+# Waits 4 seconds to finish loading page
+time.sleep(4)
+
 # Login via 2FA if need be
 try:
     driver.find_element_by_xpath("//*[contains(text(), 'Continue')]").click()
