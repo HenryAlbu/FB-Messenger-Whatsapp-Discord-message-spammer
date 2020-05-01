@@ -6,8 +6,8 @@ import time
 import platform
 
 # Variables
-facebookEmail = "YOUR FACEBOOK EMAIL"
-facebookPassword = "YOUR FACEBOOK PASSWORD"
+email = "YOUR FACEBOOK EMAIL"
+password = "YOUR FACEBOOK PASSWORD"
 friendName = "THE NAME OF THE PERSON THAT WILL GET THE MESSAGES"
 sendDelay = 1;
 
@@ -21,8 +21,8 @@ else:
 driver.get('https://www.messenger.com/')
 
 # Login
-driver.find_element_by_xpath('//*[@id="email"]').send_keys(facebookEmail)
-driver.find_element_by_xpath('//*[@id="pass"]').send_keys(facebookPassword)
+driver.find_element_by_xpath('//*[@id="email"]').send_keys(email)
+driver.find_element_by_xpath('//*[@id="pass"]').send_keys(password)
 driver.find_element_by_xpath('//*[@id="loginbutton"]').click()
 
 # Waits 4 seconds to finish loading page
