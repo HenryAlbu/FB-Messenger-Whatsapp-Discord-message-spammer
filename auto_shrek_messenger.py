@@ -24,6 +24,24 @@ driver.find_element_by_xpath('//*[@id="email"]').send_keys(facebookEmail)
 driver.find_element_by_xpath('//*[@id="pass"]').send_keys(facebookPassword)
 driver.find_element_by_xpath('//*[@id="loginbutton"]').click()
 
+# Login via 2FA if need be
+try:
+    driver.find_element_by_xpath("//*[contains(text(), 'Continue')]").click()
+
+    print("2FA required")
+    tfa = str(input("Enter 2FA Code:"))
+    
+    driver.find_element_by_xpath('//*[@id="approvals_code"]').send_keys(tfa)
+    driver.find_element_by_xpath("//*[contains(text(), 'Continue')]").click()
+    driver.find_element_by_xpath("//*[contains(text(), 'Continue')]").click()
+    driver.find_element_by_xpath("//*[contains(text(), 'Continue')]").click()
+    driver.find_element_by_xpath("//*[contains(text(), 'This Was Me')]").click()
+    driver.find_element_by_xpath("//*[contains(text(), 'Continue')]").click()
+
+# No need to login via 2FA
+except:
+    print("2FA not required")
+
 # Gets user from conversation list
 getUser = driver.find_element_by_xpath("//*[contains(text(), '" + friendName + "')]").click()
 
