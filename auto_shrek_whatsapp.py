@@ -2,6 +2,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
+import platform 
 
 
 # Variables
@@ -10,9 +11,11 @@ sendDelay = 1
 foundPage = 0
 
 # Opens Whatsapp
-driver = webdriver.Chrome('chromedriver.exe')
-#For Mac users, you don't have chromedriver.exe, please use the code below for driver:
-#driver = webdriver.Chrome()
+dif platform.system() == "Windows":
+    driver = webdriver.Chrome('chromedriver.exe')
+else:
+    driver = webdriver.Chrome()
+    
 driver.get('https://web.whatsapp.com/')
 
 # Waits for you to scan the whatsapp QR code
