@@ -15,6 +15,8 @@ driver = webdriver.Chrome('chromedriver.exe')
 #driver = webdriver.Chrome()
 driver.get('https://www.messenger.com/')
 
+time.sleep(2.0)
+
 # Login
 driver.find_element_by_xpath('//*[@id="email"]').send_keys(facebookEmail)
 driver.find_element_by_xpath('//*[@id="pass"]').send_keys(facebookPassword)
