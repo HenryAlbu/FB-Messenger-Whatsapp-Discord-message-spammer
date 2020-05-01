@@ -2,6 +2,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
+import platform 
 
 # Variables
 facebookEmail = "YOUR FACEBOOK EMAIL"
@@ -9,12 +10,13 @@ facebookPassword = "YOUR FACEBOOK PASSWORD"
 friendName = "THE NAME OF THE PERSON THAT WILL GET THE MESSAGES"
 sendDelay = 1;
 
-# Opens Facebook Messenger
-driver = webdriver.Chrome('chromedriver.exe')
-#For Mac users, you don't have chromedriver.exe, please use the code below for driver:
-#driver = webdriver.Chrome()
-driver.get('https://www.messenger.com/')
+if platform.system() == "Windows":
+    driver = webdriver.Chrome('chromedriver.exe')
+else:
+    driver = webdriver.Chrome()
 
+# Opens Facebook Messenger
+driver.get('https://www.messenger.com/')
 time.sleep(2.0)
 
 # Login
