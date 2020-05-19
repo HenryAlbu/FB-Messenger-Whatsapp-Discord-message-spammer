@@ -23,7 +23,7 @@
 ## Installation  
   
 Clone or download this repo:
-`` git clone https://https://github.com/HenryAlbu/FB-Messenger-Whatsapp-Discord-message-spammer.git``
+`` git clone https://github.com/HenryAlbu/FB-Messenger-Whatsapp-Discord-message-spammer.git``
 
 Go to the project directory
 `` cd FB-Messenger-Whatsapp-Discord-message-spammer``
