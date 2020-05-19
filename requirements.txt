@@ -1,1 +1,2 @@
-selenium
+selenium==3.141.0
+PySimpleGUI==4.19.0
