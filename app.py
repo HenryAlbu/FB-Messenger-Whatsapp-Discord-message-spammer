@@ -35,7 +35,7 @@ def the_gui():
             [sg.Text('Delay (seconds):', size=(17, 1), font=("Roboto", 8)),
              sg.Spin(values=('0', '.5', '1','1.5','2','2.5','3'), key="delay", initial_value='1', size=(6, 1), tooltip="wait time between messages")],
         ],
-            title='Instagram Login', title_color="#ffffff"), sg.Column(output)],
+            title='Login', title_color="#ffffff"), sg.Column(output)],
 
         [sg.Frame(layout=[
             [sg.Multiline(default_text='Paste any block of text here and this is what will be sent word for word', size=(91, 10), key='user_text')],

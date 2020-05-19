@@ -17,13 +17,13 @@
   </p>
 </p>
 <p align="center">
-  <img src="https://i.imgur.com/9UDygow.jpg" width="100%">
+  <img src="https://i.imgur.com/HnCrKRh.jpg" width="100%">
 </p> 
 
 ## Installation  
   
 Clone or download this repo:
-`` git clone https://https://github.com/HenryAlbu/FB-Messenger-Whatsapp-Discord-message-spammer.git``
+`` git clone https://github.com/HenryAlbu/FB-Messenger-Whatsapp-Discord-message-spammer.git``
 
 Go to the project directory
 `` cd FB-Messenger-Whatsapp-Discord-message-spammer``
@@ -41,10 +41,15 @@ This project is Selenium based and requires a `chromedriver` browser. I have alr
 Just run: 
 ``python app.py``
 
+The input field "Friend Name" is the name of the user as it appears on each platform. In the example below, the friend name would be "Example1"
+<p align="left">
+  <img src="https://i.imgur.com/BZIGbCa.jpg" width="70%">
+</p> 
+
 ## UI 
 
 <p align="center">
-  <img src="https://i.imgur.com/wvMEijT.jpg" width="80%">
+  <img src="https://i.imgur.com/jXN5hFp.jpg" width="70%">
 </p>  
 
   
