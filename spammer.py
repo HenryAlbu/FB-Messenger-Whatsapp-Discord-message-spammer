@@ -68,10 +68,11 @@ def start_spam():
     print("Starting messages...")
     with open(settings.script, "r") as f:
         for line in f.readlines():
-            for word in line.split():
-                print("Sending: " + word)
-                # Types words and submits
-                actions = ActionChains(driver)
-                actions.send_keys(word, Keys.ENTER)
-                actions.perform()
-                sleep(float(settings.delay))
+            for i in range(settings.iterations):
+                for word in line.split():
+                    print("Sending: " + word)
+                    # Types words and submits
+                    actions = ActionChains(driver)
+                    actions.send_keys(word, Keys.ENTER)
+                    actions.perform()
+                    sleep(float(settings.delay))

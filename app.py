@@ -40,6 +40,8 @@ def the_gui():
         [sg.Frame(layout=[
             [sg.Multiline(default_text='Paste any block of text here and this is what will be sent word for word', size=(91, 10), key='user_text')],
             [sg.Checkbox('Use Shrek movie script instead', default=False, key="shrek_script")],
+            [sg.Text("Number of iterations:" ,size=(17,1),font=("Roboto",10)),
+            sg.Spin([i for i in range(1,1000)],size=(6, 1),key="iterations",initial_value=1,tooltip="How many times would you like to iterate")],
         ],title='Your Text', title_color="#ffffff")],
 
         [sg.Button('Run', size=(10, 1), key="Run"), sg.Button('Exit', size=(10, 1))]
@@ -73,6 +75,7 @@ def the_gui():
             settings.friend_name = values['friend_name']
             settings.source = values['source']
             settings.delay = values['delay']
+            settings.iterations = values['iterations']
             if values['shrek_script']:
                 settings.script = "shrek.txt"
             else:
