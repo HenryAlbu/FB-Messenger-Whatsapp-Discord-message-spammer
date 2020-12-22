@@ -1,14 +1,15 @@
-#!/usr/bin/env python3
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 import platform
 
+
 # Variables
-friendName = "Test"
 sendDelay = 1
-foundPage = 0
+email = "YOUR DISCORD EMAIL"
+password = "YOUR DISCORD PASSWORD"
+friendName = "THE NAME OF THE PERSON THAT WILL GET THE MESSAGES"
 
 # Checks if on Mac or Windows
 if platform.system() == "Windows":
@@ -16,25 +17,20 @@ if platform.system() == "Windows":
 else:
     driver = webdriver.Chrome()
 
-# Opens Whatsapp
-driver.get('https://web.whatsapp.com/')
+# Opens Discord
+driver.get('https://discordapp.com/login')
 
-# Waits for you to scan the whatsapp QR code
-def page_load():
-    getUser = driver.find_elements_by_xpath("//*[contains(text(), '" + friendName + "')]")
-    if len(getUser) > 0:
-        # waits 4 seconds to make sure page is loaded
-        time.sleep(4)
-        getUser[0].click()
-        global foundPage
-        foundPage = 1
+# Login
+driver.find_element_by_xpath('//*[@name="email"]').send_keys(email)
+driver.find_element_by_xpath('//*[@name="password"]').send_keys(password)
+driver.find_element_by_xpath('//*[@type="submit"]').click()
 
-while foundPage == 0:
-    page_load()
-    print("PLEASE SCAN QR CODE WITH PHONE")
-    time.sleep(2)
+# Waits 8 seconds to finish loading page
+time.sleep(8)
 
-# Reads Shrek script file and saves to movie_script list
+# Finds user in DM list
+getUser = driver.find_element_by_xpath("//*[contains(text(), '" + friendName + "')]").click()
+
 movie_script = []
 with open('script.txt', "r") as f:
     for line in f.readlines():
