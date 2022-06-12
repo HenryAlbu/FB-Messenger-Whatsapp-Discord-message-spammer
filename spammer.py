@@ -1,4 +1,5 @@
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 from time import sleep
@@ -9,10 +10,9 @@ def start_spam():
 
     # Checks if on Mac or Windows
     print("Opening Chrome")
-    if platform.system() == "Windows":
-        driver = webdriver.Chrome('chromedriver.exe')
-    else:
-        driver = webdriver.Chrome()
+    
+    # This will get the proper chromedriver. No need to install chromedriver seperately.
+    driver = webdriver.Chrome(ChromeDriverManager().install())
 
     # Loggin into selected platform
     print("Starting Log in....")
